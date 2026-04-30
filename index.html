@@ -1209,6 +1209,156 @@
       transform: translateY(2px);
     }
 
+    .game-launch-btn--cow {
+      background: linear-gradient(135deg, #111827 0%, #6b7280 50%, #f59e0b 100%);
+      box-shadow: 0 6px 0 rgba(17, 24, 39, 0.6), 0 8px 20px rgba(245, 158, 11, 0.22);
+    }
+
+    .game-launch-btn--cow:active {
+      box-shadow: 0 3px 0 rgba(17, 24, 39, 0.6), 0 4px 14px rgba(245, 158, 11, 0.18);
+    }
+
+    .game-shell--cow {
+      background: linear-gradient(180deg, #f3f4f6 0%, #f9fafb 45%, #fef3c7 100%);
+    }
+
+    .game-shell--cow .game-top-bar {
+      background: rgba(17, 24, 39, 0.92);
+      border-bottom-color: rgba(245, 158, 11, 0.28);
+    }
+
+    .game-shell--cow .game-title-bar,
+    .game-shell--cow .game-score {
+      color: #fff;
+    }
+
+    .game-shell--cow .game-score {
+      background: rgba(245, 158, 11, 0.22);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .game-hint-bar--cow {
+      background: rgba(17, 24, 39, 0.88);
+      color: rgba(255, 255, 255, 0.92);
+      border-color: rgba(245, 158, 11, 0.28);
+    }
+
+    .cow-quiz {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.15rem 1rem 0.75rem;
+    }
+
+    .cow-quiz-card {
+      width: 100%;
+      max-width: 26rem;
+      border-radius: 1.25rem;
+      padding: 1.05rem 1.05rem 1rem;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(17, 24, 39, 0.12);
+      box-shadow: 0 18px 40px rgba(17, 24, 39, 0.14);
+    }
+
+    .cow-quiz-progress {
+      margin: 0 0 0.55rem;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      color: rgba(17, 24, 39, 0.9);
+    }
+
+    .cow-quiz-question {
+      margin: 0 0 0.95rem;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      color: rgba(15, 23, 42, 0.95);
+    }
+
+    .cow-quiz-answers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+    }
+
+    .cow-answer-btn {
+      font-family: inherit;
+      font-size: 1.02rem;
+      font-weight: 900;
+      padding: 0.85rem 0.95rem;
+      border-radius: 1rem;
+      border: 2px solid rgba(17, 24, 39, 0.12);
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.08), rgba(245, 158, 11, 0.12));
+      color: rgba(30, 41, 59, 0.95);
+      cursor: pointer;
+      transition: transform 0.12s ease, filter 0.12s ease, border-color 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .cow-answer-btn:hover {
+      filter: brightness(1.03);
+      border-color: rgba(245, 158, 11, 0.25);
+    }
+
+    .cow-answer-btn:active {
+      transform: translateY(2px);
+    }
+
+    .cow-answer-btn[disabled] {
+      cursor: default;
+      opacity: 0.85;
+      transform: none;
+      filter: none;
+    }
+
+    .cow-answer-btn.is-correct {
+      border-color: rgba(34, 197, 94, 0.35);
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(16, 185, 129, 0.14));
+    }
+
+    .cow-answer-btn.is-wrong {
+      border-color: rgba(239, 68, 68, 0.35);
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.16), rgba(251, 113, 133, 0.12));
+    }
+
+    .cow-quiz-bottom {
+      margin-top: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .cow-quiz-feedback {
+      margin: 0;
+      font-weight: 900;
+      min-height: 1.2em;
+      color: rgba(17, 24, 39, 0.9);
+    }
+
+    .cow-quiz-next {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 900;
+      padding: 0.75rem 1rem;
+      border-radius: 1rem;
+      border: 2px solid rgba(17, 24, 39, 0.12);
+      background: rgba(255, 255, 255, 0.72);
+      color: rgba(30, 41, 59, 0.95);
+      cursor: pointer;
+      transition: transform 0.12s ease, filter 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .cow-quiz-next:hover {
+      filter: brightness(1.03);
+    }
+
+    .cow-quiz-next:active {
+      transform: translateY(2px);
+    }
+
     .game-shell--doodle {
       background: linear-gradient(180deg, #fffbeb 0%, #fef3c7 50%, #fde68a 100%);
     }
@@ -1520,6 +1670,9 @@
             </button>
             <button type="button" class="game-launch-btn game-launch-btn--dog" id="open-game-dog-questions">
               Dog Questions
+            </button>
+            <button type="button" class="game-launch-btn game-launch-btn--cow" id="open-game-cow-questions">
+              Cow Questions
             </button>
           </div>
         </div>
@@ -1848,6 +2001,30 @@
           </div>
         </div>
         <p class="game-hint-bar game-hint-bar--dog">Pick an answer — dogs are awesome.</p>
+      </div>
+    </section>
+
+    <section class="screen screen-game is-hidden" id="screen-game-cow-questions" aria-hidden="true">
+      <div class="game-shell game-shell--cow">
+        <header class="game-top-bar">
+          <div class="game-top-meta">
+            <h2 class="game-title-bar">Cow Questions</h2>
+            <span class="game-score" id="cow-questions-score" aria-live="polite">Score: 0</span>
+          </div>
+          <button type="button" class="exit-game-btn" id="exit-game-cow-questions">Exit Game</button>
+        </header>
+        <div class="cow-quiz">
+          <div class="cow-quiz-card" role="group" aria-label="Cow question">
+            <p class="cow-quiz-progress" id="cow-quiz-progress" aria-live="polite">Question 1</p>
+            <h3 class="cow-quiz-question" id="cow-quiz-question">Loading…</h3>
+            <div class="cow-quiz-answers" id="cow-quiz-answers"></div>
+            <div class="cow-quiz-bottom">
+              <p class="cow-quiz-feedback" id="cow-quiz-feedback" aria-live="polite"></p>
+              <button type="button" class="cow-quiz-next" id="cow-quiz-next">Next</button>
+            </div>
+          </div>
+        </div>
+        <p class="game-hint-bar game-hint-bar--cow">Pick an answer — mooo-ve fast!</p>
       </div>
     </section>
   </div>
@@ -5877,6 +6054,147 @@
       openGameDogQuestionsBtn.focus({ preventScroll: true });
     }
 
+    const screenGameCowQuestions = document.getElementById("screen-game-cow-questions");
+    const openGameCowQuestionsBtn = document.getElementById("open-game-cow-questions");
+    const exitGameCowQuestionsBtn = document.getElementById("exit-game-cow-questions");
+    const cowQuestionsScoreEl = document.getElementById("cow-questions-score");
+    const cowQuizProgressEl = document.getElementById("cow-quiz-progress");
+    const cowQuizQuestionEl = document.getElementById("cow-quiz-question");
+    const cowQuizAnswersEl = document.getElementById("cow-quiz-answers");
+    const cowQuizFeedbackEl = document.getElementById("cow-quiz-feedback");
+    const cowQuizNextBtn = document.getElementById("cow-quiz-next");
+
+    const cowQuestionsBank = [
+      { q: "What sound do cows usually make?", choices: ["Moo", "Meow", "Bark", "Quack"], a: 0 },
+      { q: "Cows are…", choices: ["Mammals", "Reptiles", "Fish", "Insects"], a: 0 },
+      { q: "What do cows eat most of the time?", choices: ["Grass", "Ice cream", "Stones", "Cookies"], a: 0 },
+      { q: "Where do many cows live?", choices: ["Farms", "Oceans", "Space", "Volcanoes"], a: 0 },
+      { q: "A baby cow is called a…", choices: ["Calf", "Puppy", "Kitten", "Chick"], a: 0 },
+      { q: "Cows can have…", choices: ["Horns", "Gills", "Wheels", "Feathers"], a: 0 },
+      { q: "What do cows drink?", choices: ["Water", "Sand", "Paint", "Gasoline"], a: 0 },
+      { q: "What do cows make that people drink?", choices: ["Milk", "Lemonade", "Soup", "Soda"], a: 0 },
+      { q: "Cows have hooves on their…", choices: ["Feet", "Wings", "Fins", "Hands"], a: 0 },
+      { q: "Which is a cow color you might see?", choices: ["Black and white", "Neon rainbow", "Invisible", "Glow green only"], a: 0 },
+    ];
+
+    const cowGame = {
+      running: false,
+      score: 0,
+      order: [],
+      idx: 0,
+      answered: false,
+    };
+
+    function cowShuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = (Math.random() * (i + 1)) | 0;
+        const t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+      }
+      return arr;
+    }
+
+    function cowSetScore() {
+      if (!cowQuestionsScoreEl) return;
+      cowQuestionsScoreEl.textContent = `Score: ${cowGame.score}`;
+    }
+
+    function cowRenderQuestion() {
+      if (!cowQuizQuestionEl || !cowQuizAnswersEl || !cowQuizProgressEl) return;
+      if (!cowGame.running) return;
+
+      if (cowGame.idx >= cowGame.order.length) {
+        cowGame.order = cowShuffle(Array.from(cowQuestionsBank.keys()));
+        cowGame.idx = 0;
+      }
+
+      const qIdx = cowGame.order[cowGame.idx];
+      const item = cowQuestionsBank[qIdx];
+
+      cowGame.answered = false;
+      if (cowQuizFeedbackEl) cowQuizFeedbackEl.textContent = "";
+      if (cowQuizNextBtn) cowQuizNextBtn.disabled = true;
+
+      cowQuizProgressEl.textContent = `Question ${cowGame.idx + 1}`;
+      cowQuizQuestionEl.textContent = item.q;
+      cowQuizAnswersEl.innerHTML = "";
+
+      item.choices.forEach((label, choiceIdx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "cow-answer-btn";
+        b.textContent = label;
+        b.addEventListener("click", () => cowChooseAnswer(choiceIdx));
+        cowQuizAnswersEl.appendChild(b);
+      });
+    }
+
+    function cowChooseAnswer(choiceIdx) {
+      if (!cowGame.running || cowGame.answered) return;
+      const qIdx = cowGame.order[cowGame.idx];
+      const item = cowQuestionsBank[qIdx];
+      cowGame.answered = true;
+
+      const buttons = Array.from(cowQuizAnswersEl ? cowQuizAnswersEl.querySelectorAll("button.cow-answer-btn") : []);
+      buttons.forEach((b) => (b.disabled = true));
+
+      const correctIdx = item.a;
+      const isCorrect = choiceIdx === correctIdx;
+      if (buttons[correctIdx]) buttons[correctIdx].classList.add("is-correct");
+      if (!isCorrect && buttons[choiceIdx]) buttons[choiceIdx].classList.add("is-wrong");
+
+      if (isCorrect) {
+        cowGame.score += 1;
+        cowSetScore();
+        if (cowQuizFeedbackEl) cowQuizFeedbackEl.textContent = "Correct!";
+      } else {
+        if (cowQuizFeedbackEl) cowQuizFeedbackEl.textContent = "Oops! Try the next one.";
+      }
+
+      if (cowQuizNextBtn) cowQuizNextBtn.disabled = false;
+    }
+
+    function cowNextQuestion() {
+      if (!cowGame.running) return;
+      if (!cowGame.answered) return;
+      cowGame.idx += 1;
+      cowRenderQuestion();
+    }
+
+    function startCowQuestionsGame() {
+      cowGame.running = true;
+      cowGame.score = 0;
+      cowSetScore();
+      cowGame.order = cowShuffle(Array.from(cowQuestionsBank.keys()));
+      cowGame.idx = 0;
+      cowRenderQuestion();
+    }
+
+    function stopCowQuestionsGame() {
+      cowGame.running = false;
+    }
+
+    function openCowQuestionsGame() {
+      if (!settingsOverlay.classList.contains("is-hidden")) closeSettings();
+      screenMain.classList.add("is-hidden");
+      screenMain.setAttribute("aria-hidden", "true");
+      screenGameCowQuestions.classList.remove("is-hidden");
+      screenGameCowQuestions.setAttribute("aria-hidden", "false");
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => startCowQuestionsGame());
+      });
+    }
+
+    function exitCowQuestionsGame() {
+      stopCowQuestionsGame();
+      screenGameCowQuestions.classList.add("is-hidden");
+      screenGameCowQuestions.setAttribute("aria-hidden", "true");
+      screenMain.classList.remove("is-hidden");
+      screenMain.setAttribute("aria-hidden", "false");
+      openGameCowQuestionsBtn.focus({ preventScroll: true });
+    }
+
     rooftopRushCanvas.addEventListener("pointerdown", (e) => {
       try {
         rooftopRushCanvas.setPointerCapture(e.pointerId);
@@ -5901,6 +6219,9 @@
     if (dogQuizNextBtn) dogQuizNextBtn.addEventListener("click", dogNextQuestion);
     openGameDogQuestionsBtn.addEventListener("click", openDogQuestionsGame);
     exitGameDogQuestionsBtn.addEventListener("click", exitDogQuestionsGame);
+    if (cowQuizNextBtn) cowQuizNextBtn.addEventListener("click", cowNextQuestion);
+    openGameCowQuestionsBtn.addEventListener("click", openCowQuestionsGame);
+    exitGameCowQuestionsBtn.addEventListener("click", exitCowQuestionsGame);
 
     novaDriftCanvas.addEventListener("pointermove", novaPointerMove);
     novaDriftCanvas.addEventListener("pointerdown", (e) => {
