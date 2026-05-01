@@ -1359,6 +1359,156 @@
       transform: translateY(2px);
     }
 
+    .game-launch-btn--horse {
+      background: linear-gradient(135deg, #7c2d12 0%, #a16207 52%, #4d7c0f 100%);
+      box-shadow: 0 6px 0 rgba(69, 26, 3, 0.55), 0 8px 20px rgba(161, 98, 7, 0.22);
+    }
+
+    .game-launch-btn--horse:active {
+      box-shadow: 0 3px 0 rgba(69, 26, 3, 0.55), 0 4px 14px rgba(161, 98, 7, 0.18);
+    }
+
+    .game-shell--horse {
+      background: linear-gradient(180deg, #ffedd5 0%, #fef3c7 45%, #ecfccb 100%);
+    }
+
+    .game-shell--horse .game-top-bar {
+      background: rgba(69, 26, 3, 0.92);
+      border-bottom-color: rgba(161, 98, 7, 0.28);
+    }
+
+    .game-shell--horse .game-title-bar,
+    .game-shell--horse .game-score {
+      color: #fff;
+    }
+
+    .game-shell--horse .game-score {
+      background: rgba(161, 98, 7, 0.22);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .game-hint-bar--horse {
+      background: rgba(69, 26, 3, 0.88);
+      color: rgba(255, 255, 255, 0.92);
+      border-color: rgba(161, 98, 7, 0.28);
+    }
+
+    .horse-quiz {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.15rem 1rem 0.75rem;
+    }
+
+    .horse-quiz-card {
+      width: 100%;
+      max-width: 26rem;
+      border-radius: 1.25rem;
+      padding: 1.05rem 1.05rem 1rem;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(69, 26, 3, 0.12);
+      box-shadow: 0 18px 40px rgba(69, 26, 3, 0.14);
+    }
+
+    .horse-quiz-progress {
+      margin: 0 0 0.55rem;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      color: rgba(69, 26, 3, 0.9);
+    }
+
+    .horse-quiz-question {
+      margin: 0 0 0.95rem;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      color: rgba(15, 23, 42, 0.95);
+    }
+
+    .horse-quiz-answers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+    }
+
+    .horse-answer-btn {
+      font-family: inherit;
+      font-size: 1.02rem;
+      font-weight: 900;
+      padding: 0.85rem 0.95rem;
+      border-radius: 1rem;
+      border: 2px solid rgba(69, 26, 3, 0.12);
+      background: linear-gradient(135deg, rgba(124, 45, 18, 0.1), rgba(161, 98, 7, 0.12));
+      color: rgba(30, 41, 59, 0.95);
+      cursor: pointer;
+      transition: transform 0.12s ease, filter 0.12s ease, border-color 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .horse-answer-btn:hover {
+      filter: brightness(1.03);
+      border-color: rgba(161, 98, 7, 0.25);
+    }
+
+    .horse-answer-btn:active {
+      transform: translateY(2px);
+    }
+
+    .horse-answer-btn[disabled] {
+      cursor: default;
+      opacity: 0.85;
+      transform: none;
+      filter: none;
+    }
+
+    .horse-answer-btn.is-correct {
+      border-color: rgba(34, 197, 94, 0.35);
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(16, 185, 129, 0.14));
+    }
+
+    .horse-answer-btn.is-wrong {
+      border-color: rgba(239, 68, 68, 0.35);
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.16), rgba(251, 113, 133, 0.12));
+    }
+
+    .horse-quiz-bottom {
+      margin-top: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .horse-quiz-feedback {
+      margin: 0;
+      font-weight: 900;
+      min-height: 1.2em;
+      color: rgba(69, 26, 3, 0.9);
+    }
+
+    .horse-quiz-next {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 900;
+      padding: 0.75rem 1rem;
+      border-radius: 1rem;
+      border: 2px solid rgba(69, 26, 3, 0.12);
+      background: rgba(255, 255, 255, 0.72);
+      color: rgba(30, 41, 59, 0.95);
+      cursor: pointer;
+      transition: transform 0.12s ease, filter 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .horse-quiz-next:hover {
+      filter: brightness(1.03);
+    }
+
+    .horse-quiz-next:active {
+      transform: translateY(2px);
+    }
+
     .game-shell--doodle {
       background: linear-gradient(180deg, #fffbeb 0%, #fef3c7 50%, #fde68a 100%);
     }
@@ -1673,6 +1823,9 @@
             </button>
             <button type="button" class="game-launch-btn game-launch-btn--cow" id="open-game-cow-questions">
               Cow Questions
+            </button>
+            <button type="button" class="game-launch-btn game-launch-btn--horse" id="open-game-horse-questions">
+              Horse Questions
             </button>
           </div>
         </div>
@@ -2025,6 +2178,30 @@
           </div>
         </div>
         <p class="game-hint-bar game-hint-bar--cow">Pick an answer — mooo-ve fast!</p>
+      </div>
+    </section>
+
+    <section class="screen screen-game is-hidden" id="screen-game-horse-questions" aria-hidden="true">
+      <div class="game-shell game-shell--horse">
+        <header class="game-top-bar">
+          <div class="game-top-meta">
+            <h2 class="game-title-bar">Horse Questions</h2>
+            <span class="game-score" id="horse-questions-score" aria-live="polite">Score: 0</span>
+          </div>
+          <button type="button" class="exit-game-btn" id="exit-game-horse-questions">Exit Game</button>
+        </header>
+        <div class="horse-quiz">
+          <div class="horse-quiz-card" role="group" aria-label="Horse question">
+            <p class="horse-quiz-progress" id="horse-quiz-progress" aria-live="polite">Question 1</p>
+            <h3 class="horse-quiz-question" id="horse-quiz-question">Loading…</h3>
+            <div class="horse-quiz-answers" id="horse-quiz-answers"></div>
+            <div class="horse-quiz-bottom">
+              <p class="horse-quiz-feedback" id="horse-quiz-feedback" aria-live="polite"></p>
+              <button type="button" class="horse-quiz-next" id="horse-quiz-next">Next</button>
+            </div>
+          </div>
+        </div>
+        <p class="game-hint-bar game-hint-bar--horse">Pick an answer — neigh way!</p>
       </div>
     </section>
   </div>
@@ -6195,6 +6372,147 @@
       openGameCowQuestionsBtn.focus({ preventScroll: true });
     }
 
+    const screenGameHorseQuestions = document.getElementById("screen-game-horse-questions");
+    const openGameHorseQuestionsBtn = document.getElementById("open-game-horse-questions");
+    const exitGameHorseQuestionsBtn = document.getElementById("exit-game-horse-questions");
+    const horseQuestionsScoreEl = document.getElementById("horse-questions-score");
+    const horseQuizProgressEl = document.getElementById("horse-quiz-progress");
+    const horseQuizQuestionEl = document.getElementById("horse-quiz-question");
+    const horseQuizAnswersEl = document.getElementById("horse-quiz-answers");
+    const horseQuizFeedbackEl = document.getElementById("horse-quiz-feedback");
+    const horseQuizNextBtn = document.getElementById("horse-quiz-next");
+
+    const horseQuestionsBank = [
+      { q: "What sound do horses often make?", choices: ["Neigh", "Moo", "Quack", "Meow"], a: 0 },
+      { q: "Horses are…", choices: ["Mammals", "Fish", "Reptiles", "Insects"], a: 0 },
+      { q: "What do horses use to run fast?", choices: ["Hooves", "Flippers", "Wheels", "Claws"], a: 0 },
+      { q: "Where might you see horses living?", choices: ["Farms or stables", "Under the ocean", "Inside volcanoes", "On the moon"], a: 0 },
+      { q: "A baby horse is called a…", choices: ["Foal", "Calf", "Puppy", "Kitten"], a: 0 },
+      { q: "What do horses eat?", choices: ["Hay/grass", "Rocks", "Candy", "Plastic"], a: 0 },
+      { q: "Horses have a long…", choices: ["Tail", "Trunk", "Antenna", "Fin"], a: 0 },
+      { q: "People sometimes ride horses using a…", choices: ["Saddle", "Helmet only", "Backpack", "Skateboard"], a: 0 },
+      { q: "Horses can be many colors, like…", choices: ["Brown/black/white", "Only purple", "Only invisible", "Only neon green"], a: 0 },
+      { q: "What helps protect a horse’s feet?", choices: ["Horseshoes", "Socks", "Gloves", "Hats"], a: 0 },
+    ];
+
+    const horseGame = {
+      running: false,
+      score: 0,
+      order: [],
+      idx: 0,
+      answered: false,
+    };
+
+    function horseShuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = (Math.random() * (i + 1)) | 0;
+        const t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+      }
+      return arr;
+    }
+
+    function horseSetScore() {
+      if (!horseQuestionsScoreEl) return;
+      horseQuestionsScoreEl.textContent = `Score: ${horseGame.score}`;
+    }
+
+    function horseRenderQuestion() {
+      if (!horseQuizQuestionEl || !horseQuizAnswersEl || !horseQuizProgressEl) return;
+      if (!horseGame.running) return;
+
+      if (horseGame.idx >= horseGame.order.length) {
+        horseGame.order = horseShuffle(Array.from(horseQuestionsBank.keys()));
+        horseGame.idx = 0;
+      }
+
+      const qIdx = horseGame.order[horseGame.idx];
+      const item = horseQuestionsBank[qIdx];
+
+      horseGame.answered = false;
+      if (horseQuizFeedbackEl) horseQuizFeedbackEl.textContent = "";
+      if (horseQuizNextBtn) horseQuizNextBtn.disabled = true;
+
+      horseQuizProgressEl.textContent = `Question ${horseGame.idx + 1}`;
+      horseQuizQuestionEl.textContent = item.q;
+      horseQuizAnswersEl.innerHTML = "";
+
+      item.choices.forEach((label, choiceIdx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "horse-answer-btn";
+        b.textContent = label;
+        b.addEventListener("click", () => horseChooseAnswer(choiceIdx));
+        horseQuizAnswersEl.appendChild(b);
+      });
+    }
+
+    function horseChooseAnswer(choiceIdx) {
+      if (!horseGame.running || horseGame.answered) return;
+      const qIdx = horseGame.order[horseGame.idx];
+      const item = horseQuestionsBank[qIdx];
+      horseGame.answered = true;
+
+      const buttons = Array.from(horseQuizAnswersEl ? horseQuizAnswersEl.querySelectorAll("button.horse-answer-btn") : []);
+      buttons.forEach((b) => (b.disabled = true));
+
+      const correctIdx = item.a;
+      const isCorrect = choiceIdx === correctIdx;
+      if (buttons[correctIdx]) buttons[correctIdx].classList.add("is-correct");
+      if (!isCorrect && buttons[choiceIdx]) buttons[choiceIdx].classList.add("is-wrong");
+
+      if (isCorrect) {
+        horseGame.score += 1;
+        horseSetScore();
+        if (horseQuizFeedbackEl) horseQuizFeedbackEl.textContent = "Correct!";
+      } else {
+        if (horseQuizFeedbackEl) horseQuizFeedbackEl.textContent = "Oops! Try the next one.";
+      }
+
+      if (horseQuizNextBtn) horseQuizNextBtn.disabled = false;
+    }
+
+    function horseNextQuestion() {
+      if (!horseGame.running) return;
+      if (!horseGame.answered) return;
+      horseGame.idx += 1;
+      horseRenderQuestion();
+    }
+
+    function startHorseQuestionsGame() {
+      horseGame.running = true;
+      horseGame.score = 0;
+      horseSetScore();
+      horseGame.order = horseShuffle(Array.from(horseQuestionsBank.keys()));
+      horseGame.idx = 0;
+      horseRenderQuestion();
+    }
+
+    function stopHorseQuestionsGame() {
+      horseGame.running = false;
+    }
+
+    function openHorseQuestionsGame() {
+      if (!settingsOverlay.classList.contains("is-hidden")) closeSettings();
+      screenMain.classList.add("is-hidden");
+      screenMain.setAttribute("aria-hidden", "true");
+      screenGameHorseQuestions.classList.remove("is-hidden");
+      screenGameHorseQuestions.setAttribute("aria-hidden", "false");
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => startHorseQuestionsGame());
+      });
+    }
+
+    function exitHorseQuestionsGame() {
+      stopHorseQuestionsGame();
+      screenGameHorseQuestions.classList.add("is-hidden");
+      screenGameHorseQuestions.setAttribute("aria-hidden", "true");
+      screenMain.classList.remove("is-hidden");
+      screenMain.setAttribute("aria-hidden", "false");
+      openGameHorseQuestionsBtn.focus({ preventScroll: true });
+    }
+
     rooftopRushCanvas.addEventListener("pointerdown", (e) => {
       try {
         rooftopRushCanvas.setPointerCapture(e.pointerId);
@@ -6222,6 +6540,9 @@
     if (cowQuizNextBtn) cowQuizNextBtn.addEventListener("click", cowNextQuestion);
     openGameCowQuestionsBtn.addEventListener("click", openCowQuestionsGame);
     exitGameCowQuestionsBtn.addEventListener("click", exitCowQuestionsGame);
+    if (horseQuizNextBtn) horseQuizNextBtn.addEventListener("click", horseNextQuestion);
+    openGameHorseQuestionsBtn.addEventListener("click", openHorseQuestionsGame);
+    exitGameHorseQuestionsBtn.addEventListener("click", exitHorseQuestionsGame);
 
     novaDriftCanvas.addEventListener("pointermove", novaPointerMove);
     novaDriftCanvas.addEventListener("pointerdown", (e) => {
