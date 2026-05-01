@@ -884,6 +884,40 @@
       border-top-color: rgba(251, 146, 60, 0.35);
     }
 
+    .game-launch-btn--parkour {
+      background: linear-gradient(135deg, #0f172a 0%, #334155 35%, #a3e635 100%);
+      box-shadow: 0 6px 0 rgba(15, 23, 42, 0.65), 0 8px 20px rgba(163, 230, 53, 0.22);
+    }
+
+    .game-launch-btn--parkour:active {
+      box-shadow: 0 3px 0 rgba(15, 23, 42, 0.65), 0 4px 14px rgba(163, 230, 53, 0.18);
+    }
+
+    .game-shell--parkour {
+      background: linear-gradient(180deg, #0f172a 0%, #1f2937 45%, #052e16 100%);
+    }
+
+    .game-shell--parkour .game-top-bar {
+      background: rgba(2, 6, 23, 0.92);
+      border-bottom-color: rgba(163, 230, 53, 0.28);
+    }
+
+    .game-shell--parkour .game-title-bar,
+    .game-shell--parkour .game-score {
+      color: #ecfccb;
+    }
+
+    .game-shell--parkour .game-score {
+      background: rgba(132, 204, 22, 0.18);
+      border-color: rgba(190, 242, 100, 0.25);
+    }
+
+    .game-hint-bar--parkour {
+      background: rgba(2, 6, 23, 0.9);
+      color: rgba(236, 252, 203, 0.92);
+      border-top-color: rgba(163, 230, 53, 0.28);
+    }
+
     .game-shell--alley {
       background: linear-gradient(180deg, #1c1917 0%, #292524 40%, #0c0a09 100%);
     }
@@ -1796,6 +1830,7 @@
     #reef-racer-canvas,
     #nova-drift-canvas,
     #rooftop-rush-canvas,
+    #parkour-canvas,
     #alley-flip-canvas {
       flex: 1;
       width: 100%;
@@ -1810,6 +1845,7 @@
     }
 
     #rooftop-rush-canvas,
+    #parkour-canvas,
     #alley-flip-canvas {
       cursor: pointer;
     }
@@ -1975,6 +2011,9 @@
             </button>
             <button type="button" class="game-launch-btn game-launch-btn--rooftop" id="open-game-rooftop">
               Rooftop Rush
+            </button>
+            <button type="button" class="game-launch-btn game-launch-btn--parkour" id="open-game-parkour">
+              Parkour Dash
             </button>
             <button type="button" class="game-launch-btn game-launch-btn--alley" id="open-game-alley">
               Alley Flip
@@ -2252,6 +2291,20 @@
         <p class="game-hint-bar game-hint-bar--rooftop">
           Tap to jump anytime — even in the air — to clear gaps. Don’t fall off — score resets.
         </p>
+      </div>
+    </section>
+
+    <section class="screen screen-game is-hidden" id="screen-game-parkour" aria-hidden="true">
+      <div class="game-shell game-shell--parkour">
+        <header class="game-top-bar">
+          <div class="game-top-meta">
+            <h2 class="game-title-bar">Parkour Dash</h2>
+            <span class="game-score" id="parkour-score" aria-live="polite">Score: 0</span>
+          </div>
+          <button type="button" class="exit-game-btn" id="exit-game-parkour">Exit Game</button>
+        </header>
+        <canvas id="parkour-canvas" width="400" height="600" aria-label="Tap to jump over hurdles and gaps."></canvas>
+        <p class="game-hint-bar game-hint-bar--parkour">Tap to jump over hurdles and gaps. If you crash or fall, your score resets.</p>
       </div>
     </section>
 
