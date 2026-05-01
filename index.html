@@ -1509,6 +1509,170 @@
       transform: translateY(2px);
     }
 
+    .game-launch-btn--mathdash {
+      background: linear-gradient(135deg, #0f172a 0%, #6366f1 50%, #22c55e 100%);
+      box-shadow: 0 6px 0 rgba(15, 23, 42, 0.62), 0 8px 20px rgba(99, 102, 241, 0.24);
+    }
+
+    .game-launch-btn--mathdash:active {
+      box-shadow: 0 3px 0 rgba(15, 23, 42, 0.62), 0 4px 14px rgba(34, 197, 94, 0.18);
+    }
+
+    .game-shell--mathdash {
+      background: linear-gradient(180deg, #eef2ff 0%, #e0f2fe 40%, #dcfce7 100%);
+    }
+
+    .game-shell--mathdash .game-top-bar {
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom-color: rgba(99, 102, 241, 0.32);
+    }
+
+    .game-shell--mathdash .game-title-bar,
+    .game-shell--mathdash .game-score {
+      color: #fff;
+    }
+
+    .game-shell--mathdash .game-score {
+      background: rgba(99, 102, 241, 0.25);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .game-hint-bar--mathdash {
+      background: rgba(15, 23, 42, 0.88);
+      color: rgba(255, 255, 255, 0.92);
+      border-color: rgba(99, 102, 241, 0.32);
+    }
+
+    .mathdash-quiz {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.15rem 1rem 0.75rem;
+    }
+
+    .mathdash-quiz-card {
+      width: 100%;
+      max-width: 26rem;
+      border-radius: 1.25rem;
+      padding: 1.05rem 1.05rem 1rem;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+    }
+
+    .mathdash-topline {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin: 0 0 0.55rem;
+    }
+
+    .mathdash-progress,
+    .mathdash-timer {
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      color: rgba(15, 23, 42, 0.9);
+    }
+
+    .mathdash-timer {
+      color: rgba(99, 102, 241, 0.95);
+    }
+
+    .mathdash-question {
+      margin: 0 0 0.95rem;
+      font-size: 1.6rem;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+      color: rgba(15, 23, 42, 0.95);
+    }
+
+    .mathdash-answers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+    }
+
+    .mathdash-answer-btn {
+      font-family: inherit;
+      font-size: 1.1rem;
+      font-weight: 900;
+      padding: 0.9rem 0.95rem;
+      border-radius: 1rem;
+      border: 2px solid rgba(15, 23, 42, 0.12);
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(34, 197, 94, 0.1));
+      color: rgba(30, 41, 59, 0.96);
+      cursor: pointer;
+      transition: transform 0.12s ease, filter 0.12s ease, border-color 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mathdash-answer-btn:hover {
+      filter: brightness(1.03);
+      border-color: rgba(99, 102, 241, 0.25);
+    }
+
+    .mathdash-answer-btn:active {
+      transform: translateY(2px);
+    }
+
+    .mathdash-answer-btn[disabled] {
+      cursor: default;
+      opacity: 0.88;
+      transform: none;
+      filter: none;
+    }
+
+    .mathdash-answer-btn.is-correct {
+      border-color: rgba(34, 197, 94, 0.38);
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(16, 185, 129, 0.14));
+    }
+
+    .mathdash-answer-btn.is-wrong {
+      border-color: rgba(239, 68, 68, 0.38);
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.16), rgba(251, 113, 133, 0.12));
+    }
+
+    .mathdash-bottom {
+      margin-top: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .mathdash-feedback {
+      margin: 0;
+      font-weight: 900;
+      min-height: 1.2em;
+      color: rgba(15, 23, 42, 0.9);
+    }
+
+    .mathdash-next {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 900;
+      padding: 0.75rem 1rem;
+      border-radius: 1rem;
+      border: 2px solid rgba(15, 23, 42, 0.12);
+      background: rgba(255, 255, 255, 0.72);
+      color: rgba(30, 41, 59, 0.95);
+      cursor: pointer;
+      transition: transform 0.12s ease, filter 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mathdash-next:hover {
+      filter: brightness(1.03);
+    }
+
+    .mathdash-next:active {
+      transform: translateY(2px);
+    }
+
     .game-shell--doodle {
       background: linear-gradient(180deg, #fffbeb 0%, #fef3c7 50%, #fde68a 100%);
     }
@@ -1826,6 +1990,9 @@
             </button>
             <button type="button" class="game-launch-btn game-launch-btn--horse" id="open-game-horse-questions">
               Horse Questions
+            </button>
+            <button type="button" class="game-launch-btn game-launch-btn--mathdash" id="open-game-math-dash">
+              Math Dash
             </button>
           </div>
         </div>
@@ -2202,6 +2369,33 @@
           </div>
         </div>
         <p class="game-hint-bar game-hint-bar--horse">Pick an answer — neigh way!</p>
+      </div>
+    </section>
+
+    <section class="screen screen-game is-hidden" id="screen-game-math-dash" aria-hidden="true">
+      <div class="game-shell game-shell--mathdash">
+        <header class="game-top-bar">
+          <div class="game-top-meta">
+            <h2 class="game-title-bar">Math Dash</h2>
+            <span class="game-score" id="math-dash-score" aria-live="polite">Score: 0 | Avg: 0.0s</span>
+          </div>
+          <button type="button" class="exit-game-btn" id="exit-game-math-dash">Exit Game</button>
+        </header>
+        <div class="mathdash-quiz">
+          <div class="mathdash-quiz-card" role="group" aria-label="Math question">
+            <div class="mathdash-topline">
+              <p class="mathdash-progress" id="mathdash-progress" aria-live="polite">Question 1</p>
+              <p class="mathdash-timer" id="mathdash-timer" aria-live="polite">0.0s</p>
+            </div>
+            <h3 class="mathdash-question" id="mathdash-question">Loading…</h3>
+            <div class="mathdash-answers" id="mathdash-answers"></div>
+            <div class="mathdash-bottom">
+              <p class="mathdash-feedback" id="mathdash-feedback" aria-live="polite"></p>
+              <button type="button" class="mathdash-next" id="mathdash-next">Next</button>
+            </div>
+          </div>
+        </div>
+        <p class="game-hint-bar game-hint-bar--mathdash">Answer as quick as you can — no time limit, just speed!</p>
       </div>
     </section>
   </div>
@@ -6513,6 +6707,201 @@
       openGameHorseQuestionsBtn.focus({ preventScroll: true });
     }
 
+    const screenGameMathDash = document.getElementById("screen-game-math-dash");
+    const openGameMathDashBtn = document.getElementById("open-game-math-dash");
+    const exitGameMathDashBtn = document.getElementById("exit-game-math-dash");
+    const mathDashScoreEl = document.getElementById("math-dash-score");
+    const mathDashProgressEl = document.getElementById("mathdash-progress");
+    const mathDashTimerEl = document.getElementById("mathdash-timer");
+    const mathDashQuestionEl = document.getElementById("mathdash-question");
+    const mathDashAnswersEl = document.getElementById("mathdash-answers");
+    const mathDashFeedbackEl = document.getElementById("mathdash-feedback");
+    const mathDashNextBtn = document.getElementById("mathdash-next");
+
+    const mathDash = {
+      running: false,
+      score: 0,
+      total: 0,
+      answered: false,
+      q: null,
+      qStart: 0,
+      lastMs: 0,
+      sumMs: 0,
+      raf: 0,
+    };
+
+    function mathDashFmtSeconds(ms) {
+      return `${(ms / 1000).toFixed(1)}s`;
+    }
+
+    function mathDashSetHeader() {
+      if (!mathDashScoreEl) return;
+      const avg = mathDash.total > 0 ? mathDash.sumMs / mathDash.total : 0;
+      mathDashScoreEl.textContent = `Score: ${mathDash.score} | Avg: ${mathDashFmtSeconds(avg)}`;
+    }
+
+    function mathDashRandInt(a, b) {
+      return a + ((Math.random() * (b - a + 1)) | 0);
+    }
+
+    function mathDashMakeQuestion() {
+      const opPick = Math.random();
+      let op = "+";
+      if (opPick > 0.66) op = "×";
+      else if (opPick > 0.33) op = "−";
+
+      let a = 0;
+      let b = 0;
+      let ans = 0;
+      if (op === "+") {
+        a = mathDashRandInt(2, 30);
+        b = mathDashRandInt(2, 30);
+        ans = a + b;
+      } else if (op === "−") {
+        a = mathDashRandInt(6, 40);
+        b = mathDashRandInt(2, Math.min(30, a - 1));
+        ans = a - b;
+      } else {
+        a = mathDashRandInt(2, 12);
+        b = mathDashRandInt(2, 12);
+        ans = a * b;
+      }
+
+      const choices = new Set([ans]);
+      while (choices.size < 4) {
+        const wobble = op === "×" ? mathDashRandInt(-10, 10) : mathDashRandInt(-8, 8);
+        let v = ans + wobble;
+        if (v < 0) v = -v;
+        if (v === ans) v += 1;
+        choices.add(v);
+      }
+
+      const arr = Array.from(choices);
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = (Math.random() * (i + 1)) | 0;
+        const t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+      }
+
+      return { a, b, op, ans, choices: arr };
+    }
+
+    function mathDashStartTimer() {
+      mathDash.qStart = performance.now();
+      mathDash.lastMs = 0;
+      if (mathDashTimerEl) mathDashTimerEl.textContent = "0.0s";
+      cancelAnimationFrame(mathDash.raf);
+      const tick = () => {
+        if (!mathDash.running || mathDash.answered) return;
+        const now = performance.now();
+        mathDash.lastMs = now - mathDash.qStart;
+        if (mathDashTimerEl) mathDashTimerEl.textContent = mathDashFmtSeconds(mathDash.lastMs);
+        mathDash.raf = requestAnimationFrame(tick);
+      };
+      mathDash.raf = requestAnimationFrame(tick);
+    }
+
+    function mathDashRender() {
+      if (!mathDashQuestionEl || !mathDashAnswersEl || !mathDashProgressEl) return;
+      if (!mathDash.running) return;
+
+      mathDash.answered = false;
+      if (mathDashFeedbackEl) mathDashFeedbackEl.textContent = "";
+      if (mathDashNextBtn) mathDashNextBtn.disabled = true;
+
+      mathDash.q = mathDashMakeQuestion();
+      const qNum = mathDash.total + 1;
+      mathDashProgressEl.textContent = `Question ${qNum}`;
+      mathDashQuestionEl.textContent = `${mathDash.q.a} ${mathDash.q.op} ${mathDash.q.b} = ?`;
+
+      mathDashAnswersEl.innerHTML = "";
+      mathDash.q.choices.forEach((v) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "mathdash-answer-btn";
+        b.textContent = String(v);
+        b.addEventListener("click", () => mathDashChoose(v));
+        mathDashAnswersEl.appendChild(b);
+      });
+
+      mathDashStartTimer();
+      mathDashSetHeader();
+    }
+
+    function mathDashChoose(v) {
+      if (!mathDash.running || mathDash.answered || !mathDash.q) return;
+      mathDash.answered = true;
+      cancelAnimationFrame(mathDash.raf);
+
+      const ms = mathDash.lastMs || Math.max(0, performance.now() - mathDash.qStart);
+      mathDash.sumMs += ms;
+      mathDash.total += 1;
+
+      const buttons = Array.from(mathDashAnswersEl ? mathDashAnswersEl.querySelectorAll("button.mathdash-answer-btn") : []);
+      buttons.forEach((b) => (b.disabled = true));
+
+      const isCorrect = v === mathDash.q.ans;
+      for (const b of buttons) {
+        const n = Number(b.textContent);
+        if (n === mathDash.q.ans) b.classList.add("is-correct");
+      }
+      if (!isCorrect) {
+        const wrongBtn = buttons.find((b) => Number(b.textContent) === v);
+        if (wrongBtn) wrongBtn.classList.add("is-wrong");
+      }
+
+      if (isCorrect) mathDash.score += 1;
+      mathDashSetHeader();
+
+      if (mathDashFeedbackEl) {
+        mathDashFeedbackEl.textContent = isCorrect ? `Correct! (${mathDashFmtSeconds(ms)})` : `Oops! (${mathDashFmtSeconds(ms)})`;
+      }
+      if (mathDashNextBtn) mathDashNextBtn.disabled = false;
+    }
+
+    function mathDashNext() {
+      if (!mathDash.running || !mathDash.answered) return;
+      mathDashRender();
+    }
+
+    function startMathDash() {
+      mathDash.running = true;
+      mathDash.score = 0;
+      mathDash.total = 0;
+      mathDash.sumMs = 0;
+      mathDash.answered = false;
+      mathDash.q = null;
+      mathDashSetHeader();
+      mathDashRender();
+    }
+
+    function stopMathDash() {
+      mathDash.running = false;
+      cancelAnimationFrame(mathDash.raf);
+      mathDash.raf = 0;
+    }
+
+    function openMathDash() {
+      if (!settingsOverlay.classList.contains("is-hidden")) closeSettings();
+      screenMain.classList.add("is-hidden");
+      screenMain.setAttribute("aria-hidden", "true");
+      screenGameMathDash.classList.remove("is-hidden");
+      screenGameMathDash.setAttribute("aria-hidden", "false");
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => startMathDash());
+      });
+    }
+
+    function exitMathDash() {
+      stopMathDash();
+      screenGameMathDash.classList.add("is-hidden");
+      screenGameMathDash.setAttribute("aria-hidden", "true");
+      screenMain.classList.remove("is-hidden");
+      screenMain.setAttribute("aria-hidden", "false");
+      openGameMathDashBtn.focus({ preventScroll: true });
+    }
+
     rooftopRushCanvas.addEventListener("pointerdown", (e) => {
       try {
         rooftopRushCanvas.setPointerCapture(e.pointerId);
@@ -6543,6 +6932,9 @@
     if (horseQuizNextBtn) horseQuizNextBtn.addEventListener("click", horseNextQuestion);
     openGameHorseQuestionsBtn.addEventListener("click", openHorseQuestionsGame);
     exitGameHorseQuestionsBtn.addEventListener("click", exitHorseQuestionsGame);
+    if (mathDashNextBtn) mathDashNextBtn.addEventListener("click", mathDashNext);
+    openGameMathDashBtn.addEventListener("click", openMathDash);
+    exitGameMathDashBtn.addEventListener("click", exitMathDash);
 
     novaDriftCanvas.addEventListener("pointermove", novaPointerMove);
     novaDriftCanvas.addEventListener("pointerdown", (e) => {
